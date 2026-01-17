@@ -1,0 +1,63 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рубрика вопросы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Приветствие -->
+    <section class="screen active" id="welcome">
+        <h1>Привет 💕</h1>
+        <p>
+            Я сделал для тебя небольшой список из вопросов.
+            Они будут не такие как всегда.  
+            Просто будь собой и отвечай искренне.
+        </p>
+        <button class="btn" onclick="start()">Пройти</button>
+    </section>
+
+    <!-- Вопросы -->
+    <section class="screen" id="question-screen">
+        <div class="card">
+            <h2 id="question-text"></h2>
+            <textarea id="answer" placeholder="Напиши свой ответ..."></textarea>
+            <button class="btn" onclick="nextQuestion()">Дальше</button>
+        </div>
+    </section>
+
+    <!-- Финал -->
+    <section class="screen" id="final">
+    <h1>Спасибо 🤍</h1>
+    <p>
+        Спасибо тебе за время, искренность и чувства.  
+        Мне было важно услышать твои ответы 🌸
+    </p>
+    <button class="btn" onclick="goToHerQuestions()">
+        Задать мне свои вопросы
+    </button>
+</section>
+
+    <!-- Ее вопросы -->
+    <section class="screen" id="her-questions">
+    <div class="card">
+        <h2 id="her-question-text"></h2>
+        <textarea id="her-answer" placeholder="Напиши свой вопрос..."></textarea>
+        <button class="btn" onclick="nextHerQuestion()">Отправить</button>
+    </div>
+</section>
+
+<!-- Мои ответы -->
+<section class="screen" id="my-answers">
+    <h1>Мои ответы для тебя, появятся тут💌</h1>
+    <div id="answers-list"></div>
+</section>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
